@@ -1,0 +1,48 @@
+.todo-card {
+    width: 300px;
+    /* Largeur du cadre */
+    border: 1px solid #ddd;
+    /* Bordure du cadre */
+    border-radius: 8px;
+    /* Bords arrondis */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
+}
+
+.todo-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    /* Espace sous le titre */
+    text-align: center;
+}
+
+.todo-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espacement entre les tâches */
+}
+
+.todo-task {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.todo-task:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    /* Légère élévation au survol */
+}
+
+.todo-task {
+    list-style: none;
+}
