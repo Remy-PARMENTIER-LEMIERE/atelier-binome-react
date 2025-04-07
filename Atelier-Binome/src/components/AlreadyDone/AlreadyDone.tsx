@@ -1,13 +1,13 @@
-import './AlreadyDone.css'
+import './AlreadyDone.css';
 
 interface Task {
-  priority: string,
-  task: string, 
-  priorityLevel: string
+  priority: string;
+  task: string;
+  priorityLevel: string;
 }
 
 interface DoneTasks {
-  doneTasksProp: Task[]
+  doneTasksProp: Task[];
 }
 
 function AlreadyDone({ doneTasksProp }: DoneTasks) {
@@ -15,15 +15,15 @@ function AlreadyDone({ doneTasksProp }: DoneTasks) {
     <section className="already-done">
       <h2>Déjà fait</h2>
       <ul>
-      {doneTasksProp.map((element: Task) => (
+        {doneTasksProp.map((element: Task) => (
           <li className={element.priorityLevel} key={element.task}>
             <h3>{element.priority}</h3>
             <p>{element.task}</p>
           </li>
-      ))}
+        ))}
       </ul>
     </section>
-  )
+  );
 }
 
 export default AlreadyDone;
