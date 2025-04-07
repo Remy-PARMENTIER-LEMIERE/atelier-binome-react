@@ -1,13 +1,28 @@
 import "./ToDoCard.css";
 
-function ToDoCard() {
+interface DoTask {
+    priority: string;
+    task: string;
+    priorityLevel: string;
+}
+
+interface tasksToDo {
+    toDoCardProps: DoTask[];
+}
+
+function ToDoCard({ toDoCardProps }: tasksToDo) {
     return (
         <section className="todo-card">
             <h2 className="todo-title">À faire</h2>
             <ul className="todo-tasks">
-                <li className="todo-task">Nouvelle tâche 1</li>
-                <li className="todo-task">Nouvelle tâche 2</li>
-                <li className="todo-task">Nouvelle tâche 3</li>
+                {toDoCardProps.map((element: DoTask) => (
+                    <li className={element.priorityLevel}>
+                        <h3>{element.priority}</h3>
+                        <p>{element.task}</p>
+
+
+                    </li>
+                ))}
             </ul>
         </section>
     );

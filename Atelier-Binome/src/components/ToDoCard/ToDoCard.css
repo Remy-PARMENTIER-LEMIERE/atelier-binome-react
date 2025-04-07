@@ -1,5 +1,6 @@
 .todo-card {
-    width: 300px;
+    width: 550px;
+    height: 400px;
     /* Largeur du cadre */
     border: 1px solid #ddd;
     /* Bordure du cadre */
@@ -23,7 +24,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 0;
+    padding-right: 40px;
     /* Espacement entre les tâches */
+
 }
 
 .todo-task {
@@ -35,6 +39,7 @@
     color: #555;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
+    list-style: none;
 }
 
 .todo-task:hover {
@@ -43,6 +48,27 @@
     /* Légère élévation au survol */
 }
 
-.todo-task {
-    list-style: none;
+.high-priority {
+    border: 2px solid black;
+    /* Bordure rouge pour l'urgence */
+    border-radius: 10px;
+    background-color: #FF4D4F;
+    color: #fff;
+
+}
+
+.medium-priority {
+    border: 2px solid black;
+    /* Bordure rouge pour l'urgence */
+    border-radius: 10px;
+    background-color: #FAAD14;
+    color: #fff;
+}
+
+.low-priority {
+    border: 2px solid black;
+    /* Bordure rouge pour l'urgence */
+    border-radius: 10px;
+    background-color: #52C41A;
+    color: #fff;
 }
