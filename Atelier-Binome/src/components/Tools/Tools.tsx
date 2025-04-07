@@ -1,6 +1,16 @@
 import './Tools.css'
 
-function Tools() {
+interface Values {
+  setNewToDoPriority: (priority: string) => void,
+  setNewToDoPriorityLevel: (priority: string) => void,
+  setNewToDoTask: (priority: string) => void
+}
+
+interface NewToDo {
+  setNewToDo: Values
+}
+
+function Tools({ setNewToDo }:NewToDo) {
 
   return (
     <section className="tools">

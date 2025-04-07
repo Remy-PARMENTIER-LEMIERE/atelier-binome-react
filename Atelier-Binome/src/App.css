@@ -6,7 +6,8 @@
 
 main {
   display: flex;
-  flex-grow: 0.4;
+  min-height: calc(100vh - 84px - 250px);
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }

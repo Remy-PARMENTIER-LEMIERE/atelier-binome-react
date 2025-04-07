@@ -3,6 +3,7 @@ import AlreadyDone from './components/AlreadyDone/AlreadyDone'
 import Tools from './components/Tools/Tools'
 import Header from "./components/Header/Header"
 import ToDoCard from "./components/ToDoCard/ToDoCard"
+import { useState } from 'react'
 
 const doneTasks = [
   {
@@ -41,6 +42,9 @@ const TasksToDo = [
   }
 ];
 function App() {
+  const [newToDoPriority, setNewToDoPriority] = useState("");
+  const [newToDoTask, setNewToDoTask] = useState("");
+  const [newToDoPriorityLevel, setNewToDoPriorityLevel] = useState("");
 
   return (
     <>
@@ -49,7 +53,7 @@ function App() {
         <ToDoCard />
         <AlreadyDone doneTasksProp={doneTasks} />
       </main>
-      <Tools />
+      <Tools setNewToDo={{setNewToDoPriority, setNewToDoPriorityLevel, setNewToDoTask}} />
     </>
   )
 }

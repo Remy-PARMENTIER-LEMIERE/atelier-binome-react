@@ -2,7 +2,9 @@
   width: 550px;
   height: 250px;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   border-radius: 10px 10px 0 0;
   position:fixed;
@@ -34,13 +36,17 @@
 .tools select {
   grid-area: select;
   padding-left: 5px;
+  background-color: #f9f9f9;
+  outline: none;
 }
 
 .tools textarea {
   padding: 0.5rem;
   transition: 0.2s;
+  background-color: #f9f9f9;
+  outline: none;
   &:focus {
-    background-color: darkgray;
+    background-color: #fff;
   }
   
 }
@@ -50,4 +56,5 @@
   margin: auto;
   padding: 0.5rem;
   border-radius: 16px;
+  border: 1px solid gray;
 }
