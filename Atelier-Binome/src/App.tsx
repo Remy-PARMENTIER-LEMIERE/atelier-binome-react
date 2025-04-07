@@ -9,21 +9,21 @@ const doneTasks = [
     priority: "Urgent",
     task: "Rendre le dossier Marconi",
     priorityLevel: "high-priority"
-  }, 
+  },
   {
-    priority: "Faire dans la journée", 
+    priority: "Faire dans la journée",
     task: "Prendre RDN contrôle technique",
     priorityLevel: "medium-priority"
-  }, 
+  },
   {
     priority: "Peut attendre",
-    task: "Prendre RDV chez le Dentiste", 
+    task: "Prendre RDV chez le Dentiste",
     priorityLevel: "low-priority"
   }
 ];
 
 
-const TasksToDo = [
+const tasksToDo = [
   {
     priority: "Urgent",
     task: "Rendre le dossier Marconi",
@@ -46,7 +46,7 @@ function App() {
     <>
       <Header />
       <main>
-        <ToDoCard />
+        <ToDoCard toDoCardProps={tasksToDo} />
         <AlreadyDone doneTasksProp={doneTasks} />
       </main>
       <Tools />
