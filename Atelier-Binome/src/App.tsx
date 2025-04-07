@@ -28,29 +28,6 @@ function App() {
   ];
   const [tasksToDoProp, setTasksToDoProp] = useState(tasksToDoDemo);
 
-  const [tasksToDo, setTasksToDo] = useState<{
-    priority: string;
-    task: string;
-    priorityLevel: string;
-  }[]>([
-
-    {
-      priority: "Urgent",
-      task: "Rendre le dossier Marconi",
-      priorityLevel: "high-priority"
-    },
-    {
-      priority: "Faire dans la journée",
-      task: "Prendre RDV contrôle technique",
-      priorityLevel: "medium-priority"
-    },
-    {
-      priority: "Peut attendre",
-      task: "Prendre RDV chez le Dentiste",
-      priorityLevel: "low-priority"
-    }
-  ]);
-
   const [doneTasks, setDoneTasks] = useState<{
     priority: string;
     task: string;
@@ -59,16 +36,16 @@ function App() {
 
   // Fonction pour déplacer une tâche de "À faire" vers "Déjà fait"
   const moveTaskToDone = (index: number) => {
-    const taskToMove = tasksToDo[index]; //Récupère la tâche à déplacer
+    const taskToMove = tasksToDoProp[index]; //Récupère la tâche à déplacer
     setDoneTasks([...doneTasks, taskToMove]); // Ajoute la tâche aux tâches terminées
-    setTasksToDo(tasksToDo.filter((_, i) => i !== index)); // Retire la tâche des tâches "à faire"
+    setTasksToDoProp(tasksToDoProp.filter((_, i) => i !== index)); // Retire la tâche des tâches "à faire"
   };
 
   return (
     <>
       <Header />
       <main>
-        <ToDoCard toDoCardProps={tasksToDo} onTaskComplete={moveTaskToDone} />
+        <ToDoCard toDoCardProps={tasksToDoProp} onTaskComplete={moveTaskToDone} />
         <AlreadyDone doneTasksProp={doneTasks} />
       </main>
       <Tools setNewToDo={setTasksToDoProp} currentToDoList={tasksToDoProp} />

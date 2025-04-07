@@ -41,6 +41,9 @@
     list-style: none;
     width: 95%;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .high-priority {
@@ -62,3 +65,28 @@
   .todo-card li p {
     margin-bottom: 0;
   }
+
+  .complete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    /* Bouton rond */
+    background-color: #4CAF50;
+    /* Vert pour indiquer "fait" */
+    color: white;
+    /* Couleur du tick */
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre */
+    transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+    background-color: #45a049;
+    /* Changement au survol */
+}
