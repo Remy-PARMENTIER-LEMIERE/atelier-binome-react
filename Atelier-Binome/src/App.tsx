@@ -41,19 +41,19 @@ const tasksToDo = [
     priorityLevel: "low-priority"
   }
 ];
+
+
 function App() {
-  const [newToDoPriority, setNewToDoPriority] = useState("");
-  const [newToDoTask, setNewToDoTask] = useState("");
-  const [newToDoPriorityLevel, setNewToDoPriorityLevel] = useState("");
+  const [tasksToDoProp, setTasksToDoProp] = useState(tasksToDo);
 
   return (
     <>
       <Header />
       <main>
-        <ToDoCard toDoCardProps={tasksToDo} />
+        <ToDoCard toDoCardProps={tasksToDoProp} />
         <AlreadyDone doneTasksProp={doneTasks} />
       </main>
-      <Tools setNewToDo={{setNewToDoPriority, setNewToDoPriorityLevel, setNewToDoTask}} />
+      <Tools setNewToDo={setTasksToDoProp} currentToDoList={tasksToDoProp} />
     </>
   )
 }

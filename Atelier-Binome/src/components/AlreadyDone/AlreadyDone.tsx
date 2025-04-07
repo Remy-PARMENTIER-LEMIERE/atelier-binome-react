@@ -13,11 +13,11 @@ interface DoneTasks {
 function AlreadyDone({ doneTasksProp }: DoneTasks) {
   return (
     <section className="already-done">
-      <h3>Déjà fait</h3>
+      <h2>Déjà fait</h2>
       <ul>
       {doneTasksProp.map((element: Task) => (
           <li className={element.priorityLevel} key={element.task}>
-            <h4>{element.priority}</h4>
+            <h3>{element.priority}</h3>
             <p>{element.task}</p>
           </li>
       ))}

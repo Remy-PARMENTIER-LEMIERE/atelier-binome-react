@@ -6,21 +6,19 @@ interface DoTask {
     priorityLevel: string;
 }
 
-interface tasksToDo {
+interface TasksToDo {
     toDoCardProps: DoTask[];
 }
 
-function ToDoCard({ toDoCardProps }: tasksToDo) {
+function ToDoCard({ toDoCardProps }: TasksToDo) {
     return (
         <section className="todo-card">
             <h2 className="todo-title">À faire</h2>
             <ul className="todo-tasks">
                 {toDoCardProps.map((element: DoTask) => (
-                    <li className={element.priorityLevel}>
+                    <li className={element.priorityLevel} key={element.task}>
                         <h3>{element.priority}</h3>
                         <p>{element.task}</p>
-
-
                     </li>
                 ))}
             </ul>
