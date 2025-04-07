@@ -1,35 +1,56 @@
 .todo-card {
-    width: 550px;
-    height: 400px;
-    /* Largeur du cadre */
-    border: 1px solid #ddd;
-    /* Bordure du cadre */
-    border-radius: 8px;
-    /* Bords arrondis */
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
+    min-width: 350px;
+    width: 30%;
+    min-height: 300px;
+    height: 40vh;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    opacity: 0.7;
 }
 
+/* Titre de la carte */
 .todo-title {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
-    /* Espace sous le titre */
     text-align: center;
 }
 
+/* Liste des tâches avec scrollbar */
 .todo-tasks {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-left: 0;
-    padding-right: 40px;
-    /* Espacement entre les tâches */
-
+    padding-right: 10px;
+    /* Espacement pour éviter que la scrollbar touche les tâches */
+    max-height: calc(40vh - 2rem);
+    /* Ajuste la hauteur avec celle de la carte */
+    overflow-y: auto;
+    /* Scrollbar verticale si nécessaire */
 }
 
+/* Personnalisation de la scrollbar (optionnel) */
+.todo-tasks::-webkit-scrollbar {
+    width: 8px;
+    /* Largeur de la scrollbar */
+}
+
+.todo-tasks::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* Couleur de la poignée */
+    border-radius: 4px;
+    /* Arrondi */
+}
+
+.todo-tasks::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+    /* Couleur au survol */
+}
+
+/* Style individuel des tâches */
 .todo-task {
     padding: 10px;
     border: 1px solid #ddd;
@@ -45,21 +66,19 @@
 .todo-task:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
-    /* Légère élévation au survol */
+    /* Élévation légère au survol */
 }
 
+/* Boutons de priorité */
 .high-priority {
     border: 2px solid black;
-    /* Bordure rouge pour l'urgence */
     border-radius: 10px;
     background-color: #FF4D4F;
     color: #fff;
-
 }
 
 .medium-priority {
     border: 2px solid black;
-    /* Bordure rouge pour l'urgence */
     border-radius: 10px;
     background-color: #FAAD14;
     color: #fff;
@@ -67,8 +86,44 @@
 
 .low-priority {
     border: 2px solid black;
-    /* Bordure rouge pour l'urgence */
     border-radius: 10px;
     background-color: #52C41A;
     color: #fff;
+}
+
+/* Bouton complet pour marquer une tâche comme faite */
+.complete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    /* Bouton rond */
+    background-color: #4CAF50;
+    /* Vert pour indiquer "fait" */
+    color: white;
+    /* Couleur du tick */
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre */
+    transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+    background-color: #45a049;
+    /* Changement au survol */
+}
+
+/* Structure des tâches (alignement texte et bouton) */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
 }
