@@ -1,92 +1,93 @@
 .todo-card {
-    min-width: 350px;
-    width: 30%;
-    min-height: 300px;
-    height: 40vh;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  }
-  
-  .todo-card h2 {
-    margin: 8px 0;
-    text-align: center;
-    font-size: 1.5rem;
-    position: sticky;
-  }
-  
-  .todo-card ul {
-    margin-top: 0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    overflow-y: auto;
-    height: calc(40vh - 75px);
-    min-height: 225px;
-  
-    &::-webkit-scrollbar {
-      width: 4px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: #6b6b6b6b;
-    }
-  }
-  
-  .todo-card li {
-    border-radius: 10px;
-    padding: 1rem;
-    list-style: none;
-    width: 95%;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .high-priority {
-    background-color: rgba(255, 0, 0, 0.2);
-  }
-  
-  .medium-priority {
-    background-color: rgba(255, 255, 0, 0.20);
-  }
-  
-  .low-priority {
-    background-color: rgba(73, 182, 255, 0.2);
-  }
-  
-  .todo-card li h3 {
-    margin: 0;
-  }
-  
-  .todo-card li p {
-    margin-bottom: 0;
+  min-width: 350px;
+  width: 30%;
+  min-height: 300px;
+  height: 40vh;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.todo-card h2 {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  position: sticky;
+}
+
+.todo-card ul {
+  margin-top: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  overflow-y: auto;
+  height: calc(40vh - 75px);
+  min-height: 225px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
   }
 
-  .complete-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    /* Bouton rond */
-    background-color: #4CAF50;
-    /* Vert pour indiquer "fait" */
-    color: white;
-    /* Couleur du tick */
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre */
-    transition: background-color 0.3s ease;
+  &::-webkit-scrollbar-thumb {
+    background-color: #6b6b6b6b;
+  }
+}
+
+.todo-card li {
+  border-radius: 10px;
+  padding: 1rem;
+  list-style: none;
+  width: 95%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.high-priority {
+  background-color: #FFCAFB;
+}
+
+.medium-priority {
+  background-color: #47956D;
+}
+
+.low-priority {
+  background-color: #FFEC99;
+}
+
+.todo-card li h3 {
+  margin: 0;
+}
+
+.todo-card li p {
+  margin-bottom: 0;
+}
+
+.complete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  /* Bouton rond */
+  background-color: #87DCD0;
+  /* Vert pour indiquer "fait" */
+  color: white;
+  /* Couleur du tick */
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ombre */
+  transition: background-color 0.3s ease;
 }
 
 .complete-button:hover {
-    background-color: #45a049;
-    /* Changement au survol */
+  background-color: #9DF7EC;
+  /* Changement au survol */
 }

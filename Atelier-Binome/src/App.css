@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #FFF8F3;
 }
 
 main {
@@ -10,4 +11,21 @@ main {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: #FFF8F3;
+
+}
+
+
+
+main img {
+  width: 200px;
+  position: relative;
+  /* Permet à l'image de bouger sans affecter les autres éléments */
+  transition: transform 0.5s ease-in-out;
+  /* Ajoute une transition fluide */
+}
+
+main img:hover {
+  transform: translateX(-20px);
+  /* Fait glisser l'image de 20px vers la gauche au survol */
 }
