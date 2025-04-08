@@ -45,10 +45,12 @@ function App() {
     <>
       <Header />
       <main>
-        <ToDoCard toDoCardProps={tasksToDoProp} onTaskComplete={moveTaskToDone} />
-        <AlreadyDone doneTasksProp={doneTasks} />
-      </main>
+        <div className="cards-container">
+          <ToDoCard toDoCardProps={tasksToDoProp} onTaskComplete={moveTaskToDone} />
+          <AlreadyDone doneTasksProp={doneTasks} />
+        </div>
       <Tools setNewToDo={setTasksToDoProp} currentToDoList={tasksToDoProp} />
+      </main>
     </>
   );
 }

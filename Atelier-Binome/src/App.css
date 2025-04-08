@@ -5,9 +5,26 @@
 }
 
 main {
+  min-height: calc(100vh - 84px);
   display: flex;
-  min-height: calc(100vh - 84px - 250px);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cards-container {
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin: 16px 0 75px;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 747px) {
+  main {
+    display: block;
+    margin: 0 auto;
+    min-height: calc(100vh - 86px);
+  }
 }

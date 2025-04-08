@@ -42,10 +42,22 @@ function Tools({ setNewToDo, currentToDoList }: StateSetter) {
     setNewToDoTask("");
   }
 
+  //OPEN AND REDUCE TOOLS
+
+  const [openStatus, setOpenStatus] = useState("tools")
+
+  const handleClick = () => {
+    if (openStatus === "tools") {
+        setOpenStatus("tools open-tools");
+    } else {
+        setOpenStatus("tools");
+    }
+}
+
 
   return (
-    <section className="tools">
-      <h3>Nouvelle tâche</h3>
+    <section className={openStatus}>
+      <h3 onClick={handleClick}>Nouvelle tâche</h3>
       <form action=""  onSubmit={handleSubmit}>
         <select name="priority" id="priority-selector" value={newToDoPriority} onChange={handleChangePriority} required>
           <option value="">-- Choisissez une priorité --</option>
