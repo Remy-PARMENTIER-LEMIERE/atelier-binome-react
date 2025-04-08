@@ -47,6 +47,7 @@ function App() {
       <main>
         <div className="cards-container">
           <ToDoCard toDoCardProps={tasksToDoProp} onTaskComplete={moveTaskToDone} />
+          <img src="https://cdn.pixabay.com/photo/2014/03/25/16/28/todo-list-297195_1280.png" alt="Homme regardant sa liste de choses à faire" />
           <AlreadyDone doneTasksProp={doneTasks} />
         </div>
       <Tools setNewToDo={setTasksToDoProp} currentToDoList={tasksToDoProp} />

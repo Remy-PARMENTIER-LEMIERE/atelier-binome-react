@@ -6,7 +6,7 @@
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 1rem;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   opacity: 0.7;
 }
 
@@ -31,6 +31,7 @@
   &::-webkit-scrollbar {
     width: 4px;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: #6b6b6b6b;
   }
@@ -62,4 +63,10 @@
 
 .already-done li p {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 747px) {
+  .already-done {
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
 }
